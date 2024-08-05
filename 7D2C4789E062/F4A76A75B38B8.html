@@ -148,6 +148,16 @@ gtag('js',new Date());gtag('config','UA-49553618-3')
                 <p style="text-align:center;"> <a target="_blank" href="https://starblast-shipyard.github.io/" alt="Loveship exoplanet shipyard" style="text-decoration: underline">Starblast Shipyard</a> </p>
             </div>
         </div>
+        <div class="changelog-new" data-translate-base="guisettings" lang="en">
+            <h2 style="text-align:center"><i class="fa fa-settings"></i>Settings<i class="fa fa-settings"></i></h2>
+            <ul>
+                <li> <label for="removetimer">Emote Capacity:</label> <span id="emoteCapacityValue">1</span> <input type="range" id="emoteCapacity" min="1" max="5" style="width: 50px" class="custom-input"> </li>
+                <li> <input type="text" maxlength="5" id="autoToxic" placeholder="max 5" style="width: 50px" class="custom-input"> <input type="checkbox" name="autoToxictoogle" class="custom-checkbox" id="autoToxictoogle"> <label for="autoToxictoogle">Auto GG</label> </li>
+                <li> <input type="color" value="#FF0000" name="gemColor" class="custom-input" id="gemColor"> <label for="gemColor">Gem Color</label> </li>
+                <li> <input type="color" value="#FF8080" name="gemColor2" class="custom-input" id="gemColor2"> <label for="gemColor2">Gem Color 2</label> </li>
+                <li> <input type="color" value="#FF8080" name="custommaterial" class="custom-input" id="custommaterial"> <label for="custommaterial">Custom Material</label> </li>
+            </ul>
+        </div>
         <div class="textcentered community changelog-new" data-translate-base="music" lang="en"> <a href="https://open.spotify.com/user/gilpom/playlist/47N9rRbMXezlPXvhqVM3lJ?si=6bHzE9A9S-2TGh7C4OndkA" target="_blank"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
                     <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.56-8-8-8zm3.68 11.56c-.16.24-.44.32-.68.16-1.88-1.16-4.24-1.4-7.04-.76-.28.08-.52-.12-.6-.36-.08-.28.12-.52.36-.6 3.04-.68 5.68-.4 7.76.88.28.12.32.44.2.68zm.96-2.2c-.2.28-.56.4-.84.2-2.16-1.32-5.44-1.72-7.96-.92-.32.08-.68-.08-.76-.4-.08-.32.08-.68.4-.76 2.92-.88 6.52-.44 9 1.08.24.12.36.52.16.8zm.08-2.24C10.16 5.6 5.88 5.44 3.44 6.2c-.4.12-.8-.12-.92-.48-.12-.4.12-.8.48-.92 2.84-.84 7.52-.68 10.48 1.08.36.2.48.68.28 1.04-.2.28-.68.4-1.04.2z" fill-rule="nonzero" />
                 </svg><br>Spotify</a> <a href="https://www.deezer.com/playlist/5343057502" target="_blank"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
@@ -234,7 +244,20 @@ gtag('js',new Date());gtag('config','UA-49553618-3')
     setTimeout(function(){console.clear();console.log("%c%c%cDONE","font-size: 100px;","","color: hsla(115, 100%, 80%, 0.48); font-size: 1.4em; background-color: hsla(115, 100%, 6%, 0.65); border: .1em solid white; border-radius: 0.5em; padding: 1em; padding-left: 6em; padding-right: 6em; margin-left: 1.6em;");setTimeout(function(){console.clear();if(window.lordclient){console.log("%c   %c\n%cMade By Lord/Lytra","font-size: 200px; background:url(https://cdn.upload.systems/uploads/V6BPxxAQ.png) no-repeat; background-size: contain;","","color: hsla(155, 100%, 50%, 0.39); font-size: 1em; background-color: black; border: .1em solid white; border-radius: 0.5em; padding: 1em; padding-left: 1.6em; padding-right: 1.6em; margin-left: 1.6em;")}else{console.log("%c   %c\n%cMade By Lord/Lytra","font-size: 100px; background:url(https://cdn.upload.systems/uploads/V6BPxxAQ.png) no-repeat; background-size: contain;","","color: hsla(155, 100%, 50%, 0.39); font-size: 1em; background-color: black; border: .1em solid white; border-radius: 0.5em; padding: 1em; padding-left: 1.6em; padding-right: 1.6em; margin-left: 1.6em;")}
     showHelp()},1000)},3000)
 </script>
-
+<script>
+document.addEventListener('DOMContentLoaded',function(){var checkboxes=[{name:'autoToxictoogle',localStorageKey:'Auto GG toggle',},];checkboxes.forEach(function(checkbox){setupCheckbox(checkbox)});var rangeInput=document.getElementById("emoteCapacity");if(rangeInput){var savedValue=localStorage.getItem('Emote Capacity');if(savedValue===null){savedValue=4;localStorage.setItem('Emote Capacity',savedValue)}
+rangeInput.value=savedValue;document.getElementById("emoteCapacityValue").textContent=savedValue;rangeInput.addEventListener("input",function(){var currentValue=rangeInput.value;document.getElementById("emoteCapacityValue").textContent=currentValue;localStorage.setItem('Emote Capacity',currentValue)})}
+var gemColorInput=document.querySelector('input[name="gemColor"]');if(gemColorInput){var savedGemColor=localStorage.getItem('Gem Color');if(savedGemColor===null){savedGemColor='#FF0000';localStorage.setItem('Gem Color',savedGemColor)}
+gemColorInput.value=savedGemColor;gemColorInput.addEventListener("input",function(){var currentGemColor=gemColorInput.value;localStorage.setItem('Gem Color',currentGemColor)})}
+var gemColor2Input=document.querySelector('input[name="gemColor2"]');if(gemColor2Input){var savedGemColor2=localStorage.getItem('Gem Color 2');if(savedGemColor2===null){savedGemColor2='#FF8080';localStorage.setItem('Gem Color 2',savedGemColor2)}
+gemColor2Input.value=savedGemColor2;gemColor2Input.addEventListener("input",function(){var currentGemColor2=gemColor2Input.value;localStorage.setItem('Gem Color 2',currentGemColor2)})}
+var materialcolor=document.querySelector('input[name="custommaterial"]');if(materialcolor){var savedmaterialcolor=localStorage.getItem('Material Color');if(savedmaterialcolor===null){savedmaterialcolor='#FF8080';localStorage.setItem('Material Color',savedmaterialcolor)}
+materialcolor.value=savedmaterialcolor;materialcolor.addEventListener("input",function(){var currentmaterialcolor=materialcolor.value;localStorage.setItem('Material Color',currentmaterialcolor)})}
+var autoToxicInput=document.getElementById("autoToxic");if(autoToxicInput){var savedAutoToxicValue=localStorage.getItem('Auto Toxic Value');if(savedAutoToxicValue===null){savedAutoToxicValue='';localStorage.setItem('Auto Toxic Value',savedAutoToxicValue)}
+autoToxicInput.value=savedAutoToxicValue;autoToxicInput.addEventListener("input",function(){var currentAutoToxicValue=autoToxicInput.value;localStorage.setItem('Auto Toxic Value',currentAutoToxicValue)})}
+function setupCheckbox({name,localStorageKey}){var checkbox=document.querySelector(`input[name="${name}"]`);if(!checkbox){console.error(`Checkbox with name "${name}" not found.`);return}
+var isChecked=localStorage.getItem(localStorageKey)==='true';checkbox.checked=isChecked;checkbox.addEventListener('change',function(){localStorage.setItem(localStorageKey,checkbox.checked)})}})
+</script>
     <script>var gdactive = false;</script>
     <script>var cgactive = false;</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script>
