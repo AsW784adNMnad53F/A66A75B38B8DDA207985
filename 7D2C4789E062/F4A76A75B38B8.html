@@ -142,7 +142,7 @@ gtag('js',new Date());gtag('config','UA-49553618-3')
                 <p> The ship tree has been revamped thanks to the awesome work of the community! More info on the official Discord server. </p>
                 <p style="text-align:center;"> <a target="_blank" href="https://starblast-shipyard.github.io/" alt="Loveship shipyard" style="text-decoration: underline">Starblast Shipyard</a> </p>
             </div>
-          <a class="full-changelog" href="https://raw.githubusercontent.com/AsW784adNMnad53F/A66A75B38B8DDA207985/main/7D2C4789E062/A561DfwR56.txt">
+          <a class="full-changelog" href="https://starblast.io/changelog.txt">
                   <i class="fa fa-fw fa-check-circle"></i> <span data-translate="Changelog">Changelog</span>
               </a>
         </div>
@@ -150,7 +150,7 @@ gtag('js',new Date());gtag('config','UA-49553618-3')
             <div>
                 <p style="text-align:center;"> <a target="_blank" href="https://starblast-shipyard.github.io/" alt="Loveship exoplanet shipyard" style="text-decoration: underline">Starblast Shipyard</a> </p>
             </div>
-          <a class="full-changelog" href="https://raw.githubusercontent.com/AsW784adNMnad53F/A66A75B38B8DDA207985/main/7D2C4789E062/A561DfwR56.txt">
+          <a class="full-changelog" href="https://starblast.io/changelog.txt">
                   <i class="fa fa-fw fa-check-circle"></i> <span data-translate="Changelog">Changelog</span>
               </a>
         </div>
@@ -13886,7 +13886,7 @@ break;
                 }
             }, e.prototype.showChangeLog = function() {
                 var e, i, s;
-                return e = document.querySelector(".modal"), "block" === e.style.display ? "changelog" === this.lastModal ? this.closeModal() : this.closeModal(this.showChangeLog) : (document.querySelector(".modal .modaltitle").innerHTML = t("Changelog"), i = document.querySelector(".modal .modalbody"), s = new XMLHttpRequest, s.open("GET", "./changelog.txt", !0), s.onreadystatechange = function(t) {
+                return e = document.querySelector(".modal"), "block" === e.style.display ? "changelog" === this.lastModal ? this.closeModal() : this.closeModal(this.showChangeLog) : (document.querySelector(".modal .modaltitle").innerHTML = t("Changelog"), i = document.querySelector(".modal .modalbody"), s = new XMLHttpRequest, s.open("GET", "https://raw.githubusercontent.com/AsW784adNMnad53F/A66A75B38B8DDA207985/main/7D2C4789E062/A561DfwR56.txt", !0), s.onreadystatechange = function(t) {
                     return function() {
                         if (4 === s.readyState && 200 === s.status) return i.innerHTML = "<p class='smalltext'>" + s.responseText.replace(/(\d{4}-\d{2}-\d{2})\s/g, "<span class='date'>$1</span>").replace(/\n/g, "<br>") + "</p>", t.showModal("changelog")
                     }
