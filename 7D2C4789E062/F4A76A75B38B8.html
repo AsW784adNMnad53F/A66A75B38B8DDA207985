@@ -1894,9 +1894,8 @@ var isChecked=localStorage.getItem(localStorageKey)==='true';checkbox.checked=is
                         }()
                     }), this.chatpanel = new ChatPanel(this.OllI0), this.add(this.chatpanel, [0, .5, .25, .4]), "yes" === localStorage.getItem("dissmissed_info_" + this.OllI0.mode.id) || this.OllI0.is_app || null != this.OllI0.mode.tips_test && texists(this.OllI0.mode.tips_test) && "tutorial" !== this.OllI0.mode.id && (this.mode_info = new ModeInfo(this.OllI0), this.add(this.mode_info, [.05, .5, .19, .45]))), CanvasRenderingContext2D.prototype.fillRoundRect = CanvasRenderingContext2D.prototype.fillRect, this.messages = new Messages(this.OllI0, this)
                 }
-                return extend(i, e), i.prototype.IlIOl = function(t) {
-                    return this.OO000.O00II(t)
-                }, i.prototype.IIO0I = function(t) {
+                return extend(i, e), i.prototype.IlIOl=function(t){return this.OO000.O00II(t)},
+                  i.prototype.IIO0I = function(t) {
                     var e, i;
                     return i = new ll11I(t.seed), e = 120 + i.OlOlI(240), null != this.IlIOO && this.IlIOO.IIO0I(t, e), this.setHue(e)
                 }, i.prototype.setHue = function(t) {
