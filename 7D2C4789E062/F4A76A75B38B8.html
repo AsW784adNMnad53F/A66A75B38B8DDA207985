@@ -162,10 +162,10 @@ gtag('js',new Date());gtag('config','UA-49553618-3')
                 <li> <input type="color" value="#FF0000" name="gemColor" class="custom-input" id="gemColor"> <label for="gemColor">Gem Color</label> </li>
                 <li> <input type="color" value="#FF8080" name="gemColor2" class="custom-input" id="gemColor2"> <label for="gemColor2">Gem Color 2</label> </li>
                 <li style="border-bottom: solid 5px hsla(115, 60%, 60%, 0.2); margin-bottom: 17px; padding-bottom: -10px;"> </li>
-                <li> <input type="checkbox" name="addtransparent" class="custom-checkbox" id="addtransparent"> <label for="addtransparent">Material Transparent </label> </li>
-                <li> <input type="text" maxlength="4" id="materialshininess" placeholder="max 5" style="width: 50px" class="custom-input"> <label for="materialshininess">Material Shininess</label> </li>
-                <li> <input type="color" value="#FF8080" name="custommaterial" class="custom-input" id="custommaterial"> <label for="custommaterial">Custom Material</label> </li>
-                <li> <input type="color" value="#FF8080" name="custommaterial2" class="custom-input" id="custommaterial2"> <label for="custommaterial2">Custom Material 2</label> </li>
+                <li> <input type="checkbox" name="addtransparent" class="custom-checkbox" id="addtransparent"> <label for="addtransparent">Custom Material Transparent </label> </li>
+                <li> <input type="text" maxlength="4" id="materialshininess" placeholder="max 5" style="width: 50px" class="custom-input"> <label for="materialshininess">Custom Material Shininess</label> </li>
+                <li> <input type="color" value="#FF8080" name="custommaterial" class="custom-input" id="custommaterial"> <label for="custommaterial">Custom Material Color</label> </li>
+                <li> <input type="color" value="#FF8080" name="custommaterial2" class="custom-input" id="custommaterial2"> <label for="custommaterial2">Custom Material Specular</label> </li>
             </ul>
         </div>
         <div class="textcentered community changelog-new" data-translate-base="music" lang="en"> <a href="https://open.spotify.com/user/gilpom/playlist/47N9rRbMXezlPXvhqVM3lJ?si=6bHzE9A9S-2TGh7C4OndkA" target="_blank"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (materialcolor) {
         var savedmaterialcolor = localStorage.getItem('Material Color');
         if (savedmaterialcolor === null) {
-            savedmaterialcolor = '#FF8080';
+            savedmaterialcolor = '#FF1A1A';
             localStorage.setItem('Material Color', savedmaterialcolor)
         }
         materialcolor.value = savedmaterialcolor;
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (materialcolor2) {
         var savedmaterialcolor2 = localStorage.getItem('Material Color2');
         if (savedmaterialcolor2 === null) {
-            savedmaterialcolor2 = '#FF8080';
+            savedmaterialcolor2 = '#2DFF1A';
             localStorage.setItem('Material Color2', savedmaterialcolor2)
         }
         materialcolor2.value = savedmaterialcolor2;
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('Auto Toxic Value', currentAutoToxicValue)
         })
     }
-    var matShininess = document.getElementById("materialshininess");
+    var matShininessInput = document.getElementById("materialshininess");
     if (matshininessInput) {
         var savedMatShininessValue = localStorage.getItem('Material Shininess');
         if (savedMatShininessValue === null) {
